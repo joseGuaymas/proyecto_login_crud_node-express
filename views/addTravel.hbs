@@ -1,0 +1,23 @@
+<body>
+    <header>
+        <nav class="nav-container container">
+            <h2 class="title">TP Database</h2>
+        </nav>
+    </header>
+    <form class="class-form" action="/listado/addTravel" method="post" enctype="multipart/form-data">
+        <h2> Agregar registro</h2>
+        <input class="input" type="text" placeholder="Inserte destino" name="city">
+        <input class="input" type="text" placeholder="Inserte provincia" name="country">
+        <input class="input" type="text" placeholder="Inserte paquete" name="pack">
+
+        <label>Carga de imagen</label>
+        <div class="img-file">
+            <input class="input-id" type="file" name="imageFile">
+        </div>
+
+        <div class="btn-add-box">
+            <input class="btn" type="submit" value="Agregar">
+            <a href="/listado"> <input class="btn btn-cancel" type="button" value="Cancelar"> </a>
+        </div>
+    </form>
+</body>

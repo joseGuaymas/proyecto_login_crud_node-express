@@ -1,0 +1,28 @@
+<body>
+    <header>
+        <nav class="nav-container container">
+            <h2 class="title">TP Database</h2>
+        </nav>
+    </header>
+    <form class="class-form" action="/listado/editTravel" method="post" enctype="multipart/form-data">
+        <h2>Editar registro</h2>
+        <input class="input-id" type="text" name="id" value="{{travel.id}}" readonly="readonly">
+        <input class="input" type="text" name="city" value="{{travel.city}}">
+        <input class="input" type="text" name="country" value="{{travel.country}}">
+        <input class="input" type="text" name="pack" value="{{travel.pack}}">
+
+        <label>Carga de imagen</label>
+        <div class="img-file"> 
+            <input class="input-id" type="file" name="imageFile">
+        </div>
+        <input type="text" value={{travel.image}} name="prevImg" hidden="hidden">
+
+        <div class="btn-box">
+            <a> <input class="btn" type="submit" value="Cambiar"> </a>
+            <a href="/listado/deleteTravel/{{travel.id}}"> <input class="btn-delete btn" type="button" value="Eliminar"> </a>
+        </div>
+        <div>
+            <a href="/listado"> <input class="btn btn-cancel" type="button" value="Cancelar">  </a>
+        </div>
+    </form>
+</body>
